@@ -15,7 +15,7 @@ enum Media {
     Radio
 }
 
-const przeprogramowani: Media = Media.Press;
+const przeprogramowani: string = Media[0];
 
 /* Do not modify tests */
 
