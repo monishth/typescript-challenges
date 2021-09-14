@@ -21,9 +21,19 @@ interface Teacher {
     teach(): string;
 }
 
-type SkilledPerson = Singer;
+type SkilledPerson = Singer & Dancer & Teacher;
 
-const johnDoe: SkilledPerson = {}
+const johnDoe: SkilledPerson = {
+    sing() {
+        return "I can sing!"
+    },
+    dance() {
+        return "I can dance!"
+    },
+    teach() {
+        return "I can teach!"
+    },
+}
 
 function buildResume(person: SkilledPerson) {
     const skills = [

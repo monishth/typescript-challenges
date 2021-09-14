@@ -26,9 +26,19 @@ const snake = new Snake()
 
 type AnimalInZoo = Monkey | Snake
 
+function isMonkey(animal: AnimalInZoo): animal is Monkey{
+    return (animal as Monkey).eatBanana !== undefined;
+}
+
 function eatSomething(animal: AnimalInZoo) {
-    animal.eatBanana();
-    animal.eatMouse();
+    if(isMonkey(animal)){
+        return animal.eatBanana();
+    } 
+    else{
+        return animal.eatMouse();
+    }
+    
+    
 }
 
 /* Do not modify tests */
